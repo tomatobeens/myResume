@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      position: absolute;
+      background: url(https://images.unsplash.com/photo-1547253113-7ed8c1f3b9ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80);
+      background-attachment: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;/*-1 可以当背景*/
+    }
+    .wrapper{
+      width: 60%;
+      min-height: 600px;
+      margin: 0 auto;
+      margin-top: 20px;
+      background-color:white;
+    }
+    .heading{
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .avatar-wrapper{
+      flex: 0 1 30%;
+    }
+    .title{
+      flex: 0 1 30%;
+    }
+    .itension{
+      flex: 0 1 40%;
+      padding-top: 55px;
+      color: #4b4a4b;
+    }
+    .avatar{
+      width: 120px;
+      height: 140px;
+      margin-top: 30px;
+      margin-left: 60px;
+      background: url(http://images2015.cnblogs.com/news/66372/201612/66372-20161222235539042-2114410393.jpg);
+      background-size: contain;
+      -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+      box-shadow: 2px 2px 5px #888888;
+    }
+    .title h2{
+      margin-top: 50px;
+      font-size: 28px;
+      color: 4d4d4d;
+      color: #4d4d4d;
+    }
+    .sperator{
+      box-flex: wrap;
+      width: 100%;
+      height: 30px;
+      margin-top: -50px;
+      background: #808080;
+      z-index: -10;
+    }
+
+    /*section*/
+    .self-info{
+      position: relative;
+      margin-top: 50px;
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      background:#008573;
+      color: white;
+      text-align: center;
+    }
+    .self-info::before{
+      position: absolute;
+      content: '';
+      height: 50;
+      border-width: 20px;
+      border-style: solid;
+      border-color: transparent transparent transparent #008573;
+      left: 100px;
+    }
+    .dashLine{
+      border: 1px dashed grey;
+      width: 100%;
+      margin-top: -21px;
+    }
+
+    /*info*/
+    .content-wrapper{
+      display: flex;
+      margin-top: 30px;
+      margin-left: 70px;
+      font-size: 15px;
+      line-height: 28px;
+    }
+    .leftContent{
+      padding-right: 50px;
+      flex: 1;
+    }
+    .rightContent{
+      flex: 1;
+    }
+    .blackColor{
+      font-weight: bold;
+    }
+    /*教育背景*/
+    .edu,.exp{
+      margin-right: 50px;
+    }
+    .rightTool{
+      margin-top: 30px;
+    }
+    /* 技能 */
+    .skills-wrapper{
+      margin-top: 30px;
+      margin-left: 70px;
+      font-size: 15px;
+      line-height: 28px;      
+    }
+
+    .negative{
+      padding-bottom: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="heading">
+      <div class="avatar-wrapper">
+        <div class="avatar"></div>
+      </div>
+      <div class="title">
+        <h2>个人简历</h2>
+      </div>
+      <div class="itension">
+        <span>求职意向 : </span>
+        <span>Web前端开发工程师(实习生)</span>
+      </div>
+    </header>
+    <div class="sperator"></div>
+    <section class="info-wrapper">
+      <div class="selfInfo-wrapper">
+        <div class="self-info">
+            个人信息
+        </div>
+        <div class="dashLine"></div>
+        <div class="content-wrapper">
+          <div class="leftContent">
+            <span class="blackColor">出生年月 : </span>
+            <span>1997年11月</span>
+            <br>
+            <span class="blackColor">民族 : </span>
+            <span>汉</span>
+            <br>
+            <span class="blackColor">电话 : </span>
+            <span>15706619444</span>
+            <br>
+            <span class="blackColor">邮箱 : </span>
+            <span>m15706619444@163.com</span>
+          </div>
+          <div class="rightContent">
+            <span class="blackColor">政治面目 : </span>
+            <span>团员</span>
+            <br>
+            <span class="blackColor">所在院校 : </span>
+            <span>广东工业大学大学城校区计算机学院</span>
+            <br>
+            <span class="blackColor">专业 : </span>
+            <span>软件工程</span>
+            <br>
+            <span class="blackColor">住址 : </span>
+            <span>广东省广州市</span>
+          </div>
+        </div>
+      </div>
+      <div class="selfInfo-wrapper">
+          <div class="self-info">
+              教育背景
+          </div>
+          <div class="dashLine"></div>
+          <div class="content-wrapper">
+            <div class="rigthContent">
+              <span class="blackColor edu">大三</span>
+              <span class="blackColor edu">广东工业大学</span>
+              <span class="blackColor edu">软件工程专业</span>
+              <span class="blackColor edu">本科</span>
+              <br>
+              <span class="blackColor">主修课程 : </span>
+              <br>
+              <span class="course">计算机组成原理 , C程序设计 , C#程序设计与.net技术 , 软件工程 , 计算机网络 , 数据结构 , 算法设计与分析 , 数据库系统 , 计算机操作系统 , 软件项目管理
+              , 高等数学 , 离散数学 , 概率论 , 线性代数 , 数字逻辑与系统设计等。
+              </span>
+            </div>
+          </div>
+        </div>
+      <div class="selfInfo-wrapper">
+        <div class="self-info">
+            项目经验
+        </div>
+        <div class="dashLine"></div>
+        <div class="content-wrapper">
+          <div class="leftContent">
+            <span class="blackColor exp">2018.09-2018.10</span>
+            <br>
+            <span class="blackColor exp">Vue高仿饿了么WebApp</span>
+            <br>
+            <span class="blackColor exp">实现功能描述:</span>
+            <br>
+            <span>1. 前端模拟商家数据用来渲染页面</span><br>
+            <span>2. 可以查看商家信息,商品信息以及优惠信息</span><br>
+            <span>3. 商品选择页可滚动且支持点击标签进行页面跳转</span><br>
+            <span>4. 可以添加商品进购物车</span><br>
+            <span>5. 自动计算选择商品的价格</span><br>
+            <span>6. 支持支付</span><br>
+          </div>
+          <div class="rightContent rightTool">
+            <span class="blackColor">效果浏览：<a href="https://tomatobeens.github.io/elem-Vue2.x/dist/index.html#/">Github Pages地址</a></span>
+            <br>
+            <span class="blackColor exp">主要开发工具和技术栈:</span>
+            <br>
+            <span>1. 开发工具使用Vscode,文档编写使用typora</span><br>
+            <span>2. 脚手架使用Vue CLI 2</span><br>
+            <span>3. 使用vue-router来配置路由</span><br>
+            <span>4. 前端模拟数据使用Node.js的开发框架express来开启后台服务</span><br>
+            <span>5. 使用vue-resource来进行web请求和处理响应</span><br>
+            <span>6. css预处理器使用stylus</span><br>
+            </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="leftContent">
+            <span class="blackColor exp">2018.10-2018.10</span>
+            <br>
+            <span class="blackColor exp">模拟多道批处理系统的两级调度</span>
+            <br>
+            <span class="blackColor exp">实现功能描述:</span>
+            <br>
+            <span>1. 利用web开发实现用户交互界面</span><br>
+            <span>2. 作业从进入系统到最后完成，要经历两级调度：作业调度和进程调度</span><br>
+            <span>3. 主存分配采用可变分区分配方式且主存中信息不允许移动，对磁带机采用静态分配策略，作业调度分别采用最小作业优先算法，进程调度采用可抢占的最短进程优先算法。</span><br>
+            <span>4. 假定“预输入”程序已经把一批作业的信息存放在输入井了，并为它们建立了相应作业表</span><br>
+            <span>5. 分别在不同算法控制下运行设计的程序，依次显示被选中作业、内存空闲区和磁带机的情况。</span><br>
+            <span>6. 除了假定的“预输入”，还可以由用户自己来输入作业信息提交到输入井进行测试</span><br>
+          </div>
+          <div class="rightContent rightTool">
+            <span class="blackColor">效果浏览：<a href="https://tomatobeens.github.io/muti-sys/dist/index.html#/">Github Pages地址</a></span>
+            <br>
+            <span class="blackColor exp">主要开发工具和技术栈:</span>
+            <br>
+            <span>1. 开发工具使用Vscode,文档编写使用markdown语法</span><br>
+            <span>2. 主要使用es6,js,html,css来进行编码开发</span><br>
+            <span>3. 样式处理使用到Bootstrap</span><br>
+            <span>4. 使用Vue CLI 2搭建脚手架</span><br>
+            </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="leftContent">
+            <span class="blackColor exp">2019.01-2019.01</span>
+            <br>
+            <span class="blackColor exp title">设计在大规模无向图找2通路的算法并分析效率</span>
+            <br>
+            <span class="blackColor exp">参与部分描述:</span>
+            <br>
+            <span>1. 参与算法实现的设计讨论</span><br>
+            <span>2. 利用Node.js铺设中间服务层</span><br>
+            <span>3. 利用web开发实现用户交互界面</span>
+            <span>4. 利用ECharts可视化设计的拓扑图验证原型</span><br>
+            <span>5. 提交路径起点和终点,根据后台提供的接口,获取寻找到的路径</span><br>
+            <span>6. 在可视化的拓扑图原型上异步动态渲染从后台接口获得的路径</span><br>
+            <span>7. 提交拓扑图的点集,异步获取后台返回的寻路时间,利用ECharts可视化效率折线</span><br>
+          </div>
+          <div class="rightContent rightTool">
+            <!-- <span class="blackColor">效果浏览：<a href="https://tomatobeens.github.io/muti-sys/dist/index.html#/">github地址</a></span> -->
+            <br>
+            <span class="blackColor exp">主要开发工具和技术栈:</span>
+            <br>
+            <span>1. 开发工具使用Vscode,文档编写使用markdown语法</span><br>
+            <span>2. 主要使用es6,js,html,css来进行编码开发</span><br>
+            <span>3. 样式处理使用到Bootstrap</span><br>
+            <span>4. 使用Node.js铺设中间服务层</span><br>
+            </div>
+        </div>
+      </div>
+      <div class="selfInfo-wrapper">
+        <div class="self-info">
+            专业技能
+        </div>
+        <div class="dashLine"></div>
+        <div class="skills-wrapper">
+          <ul>
+            <li>1. 熟悉 JavaScript , HTML , CSS </li>
+            <li>2. 熟悉Ajax等网络通信和数据交互技术，了解JSONP等跨域问题</li>
+            <li>3. 熟练使用 Vue.js 前端开发框架以及了解其响应式系统等的基本原理</li>
+            <li>4. 熟悉 webpack 的配置使用以及了解其实现原理</li>
+            <li>5. 熟练使用 Node.js 快速构建WEB服务器，并用其快速搭建项目</li>
+            <li>6. 熟练使用 bootstrap 前端框架</li>
+            <li>7. 掌握 Vscode，Git，photoshop 等工具的使用</li>
+            <li>8. 掌握计算机网络，计算机操作系统，数据结构，数据库系统等专业课程知识</li>
+          </ul>
+        </div>
+      </div>
+      <div class="selfInfo-wrapper">
+        <div class="self-info">
+            荣誉奖励
+        </div>
+        <div class="dashLine"></div>
+        <div class="skills-wrapper">
+          <span>通用技能证书：英语四级证书</span><br>
+          <span>平均 GPA 3.5 前30%</span>         
+        </div>
+      </div>
+      <div class="selfInfo-wrapper">
+        <div class="self-info">
+            自我评价
+        </div>
+        <div class="dashLine"></div>
+        <div class="skills-wrapper negative">
+          <ul>
+            <li>热爱技术，善于与他人融洽相处</li>
+            <li>在计算机学生会文娱部的锻炼，培养了我认真负责，准时守约的态度</li>
+            <li>善于沟通，勇于面对挑战和变化，具有良好的团结合作精神</li>
+            <li>拥有扎实的计算机基础知识和专业技能，熟悉软件工程化</li>
+            <li>有良好的数据结构和算法基础</li>
+            <li>喜欢ACG文化</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

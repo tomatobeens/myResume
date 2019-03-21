@@ -1,0 +1,20 @@
+
+.el-row:last-child {
+  margin-bottom: 0;
+}
+.elRow {
+  margin-top: 30px;
+}
+.boldTime {
+  font-weight: bold;
+}
+.el-form-item__label {
+  font-size: 16px !important;
+  font-weight: bold;
+  color:white !important; 
+}
+.commit {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
